@@ -1,0 +1,199 @@
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+
+    grid-template-areas: "header header header"
+    "sidebar main main"
+    "main main main"
+    "main main main"
+    "footer footer footer";
+}
+.grid {
+    padding: 50px;
+    text-align: center;
+}
+.header {
+    grid-area: header;
+    background-color: black;
+    color: white;
+}
+.side {
+    grid-area: sidebar;
+    background-color: pink;
+}
+.main {
+    grid-area: main;
+    background-color: salmon;
+}
+.footer {
+    grid-area: Footer;
+    background-color: blue;
+    color: white;
+} */
+/*
+.container {
+  display: grid;
+
+  /* 3 columns and 5 rows */
+/*  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: auto auto auto auto auto;
+
+  /* Grid area layout */
+  /* grid-template-areas:
+      "header header header"
+      "sidebar main main"
+      "main main main"
+      "main main main"
+      "footer footer footer";
+}
+
+.grid {
+  padding: 50px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;  /* Match grid area name (lowercase) */
+/*  background-color: black;
+  color: white;
+}
+
+.side {
+  grid-area: sidebar;  /* Matches "sidebar" */
+/*  background-color: pink;
+}
+
+.main {
+  grid-area: main;  /* Match grid area name (lowercase) */
+/*  background-color: salmon;
+}
+
+.footer {
+  grid-area: footer;  /* Match grid area name (lowercase) */
+/*  background-color: blue;
+  color: white;
+} */
+
+
+/* Recipe app: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(110, 38, 38, 0.952);
+    color: white;
+}
+header nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+nav h1 {
+    text-transform: uppercase;
+}
+nav form {
+    display: flex;
+    border-radius: 6px;
+}
+form input[type = "text"] {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+form button {
+    background-color: rgba(110, 38, 38, 0.952);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+form button:hover, .recipes button:hover {
+    background-color: brown;
+    cursor: pointer;
+}
+.recipe-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 90%;
+    /* min-height: 600px;
+    margin-inline: auto; */
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    /* align-items: start; */
+    border: 1px solid magenta;
+}
+
+.recipes {
+    background-color: white;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+}
+.recipes img{
+    border-radius: 8px;
+    width: auto;
+    height: 300px;
+    border: 1px solid red;
+    
+}
+.recipes h2 {
+    color: rgba(110, 38, 38, 0.952);
+}
+.recipes p {
+    color: rgba(110, 38, 38, 0.952);
+
+}
+.recipes button {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(110, 38, 38, 0.952);
+    margin: 8px;
+    color: white;
+    border: none;
+}
+.recipeDetails {
+    display : none;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    background-color: rgba(110, 38, 38, 0.952);
+    color: white;
+    width: 40%;
+    height: 50%;
+    overflow: auto;
+}
+.recipeDetailsContent {
+    padding: 30px;
+}
+.recipeName {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav form {
+        width: 80%;
+        margin-top: 10px;
+    }
+    form input[type="text"] {
+        width: 80%;
+    }
+    form button {
+        width: 20%;
+    }
+    form button:hover {
+        background-color: brown;
+        cursor: pointer;
+    }
+}
